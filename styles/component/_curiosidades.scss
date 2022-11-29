@@ -1,0 +1,35 @@
+@import '../abstract/variaveis';
+
+@mixin cores-do-texto {
+    color: $cor-secundaria;
+    margin: 10px 0;
+}
+
+#curiosidades {
+    padding: 1rem;
+    text-align: center;
+    margin: 5px;
+    .img-banner {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 50%;
+        }
+    }
+    .infor-banner {
+        h3, h4, p {
+            @include cores-do-texto;
+        }
+        h3 {
+            font-size: $tamanho-de-texto/1.5;
+        }
+        h4 {
+            font-size: $tamanho-de-texto/2.2;
+        }
+        p {
+            line-height: 1.5rem;
+        }
+    }
+}
